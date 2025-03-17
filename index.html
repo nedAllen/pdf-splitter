@@ -1,0 +1,42 @@
+// index.html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF 분할 뷰어</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <script>
+        // PDFjs 워커 설정
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PDF 분할 뷰어</h1>
+            <div class="controls">
+                <input type="file" id="file-input" accept="application/pdf" />
+                <button id="prev-page">이전 페이지</button>
+                <span id="page-info">페이지: <span id="page-num"></span> / <span id="page-count"></span></span>
+                <button id="next-page">다음 페이지</button>
+            </div>
+        </header>
+        
+        <main class="split-view">
+            <section class="text-panel">
+                <h2>텍스트 내용</h2>
+                <div id="text-content" class="content"></div>
+            </section>
+            
+            <section class="visual-panel">
+                <h2>표 & 이미지</h2>
+                <div id="visual-content" class="content"></div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
