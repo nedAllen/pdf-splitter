@@ -127,3 +127,32 @@ h2 {
         border-bottom: 1px solid #ddd;
     }
 }
+
+.pdf-paragraph {
+    margin-bottom: 1em;
+    text-align: justify;
+}
+
+.detection-info {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+}
+
+.text-layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    color: #000;
+    font-family: sans-serif;
+}
+
+.text-layer > span {
+    position: absolute;
+    white-space: pre;
+    cursor: text;
+    transform-origin: 0% 0%;
+}
