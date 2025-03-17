@@ -1,4 +1,3 @@
-// app.js
 document.addEventListener('DOMContentLoaded', () => {
     // DOM 엘리먼트
     const fileInput = document.getElementById('file-input');
